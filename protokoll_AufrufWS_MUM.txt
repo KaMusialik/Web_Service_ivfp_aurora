@@ -1,0 +1,38 @@
+------------- Beginn LeseToken:
+r.status_code:200
+r.headers:{'Transfer-Encoding': 'chunked', 'Content-Type': 'application/json; charset=utf-8', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Server': 'Microsoft-IIS/8.5', 'X-Powered-By': 'ASP.NET', 'Date': 'Sun, 29 May 2022 07:58:33 GMT'}
+r.encoding:utf-8
+r.text:{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImRpZUJheWVyaXNjaGVUb2tlblVzZXJUIiwiVXJpIjoic3RhZ2UtdC5hcGkubXVtc29sdXRpb24uZGUiLCJhdWQiOiJWb2xhdGl1bSIsImV4cCI6MTY1MzgxODMxMywiaXNzIjoiTU1Tb2x1dGlvbiJ9.4BWkATl8WdeLDPfaG27nXZislSB9JryDQvIQvtnFMfg","gueltigBis":"2022-05-29T11:58:33.4683578+02:00"}
+r.url:https://stage-t.api.mumsolution.de/login
+r.content:b'{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImRpZUJheWVyaXNjaGVUb2tlblVzZXJUIiwiVXJpIjoic3RhZ2UtdC5hcGkubXVtc29sdXRpb24uZGUiLCJhdWQiOiJWb2xhdGl1bSIsImV4cCI6MTY1MzgxODMxMywiaXNzIjoiTU1Tb2x1dGlvbiJ9.4BWkATl8WdeLDPfaG27nXZislSB9JryDQvIQvtnFMfg","gueltigBis":"2022-05-29T11:58:33.4683578+02:00"}'
+text_dict:{'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImRpZUJheWVyaXNjaGVUb2tlblVzZXJUIiwiVXJpIjoic3RhZ2UtdC5hcGkubXVtc29sdXRpb24uZGUiLCJhdWQiOiJWb2xhdGl1bSIsImV4cCI6MTY1MzgxODMxMywiaXNzIjoiTU1Tb2x1dGlvbiJ9.4BWkATl8WdeLDPfaG27nXZislSB9JryDQvIQvtnFMfg', 'gueltigBis': '2022-05-29T11:58:33.4683578+02:00'}
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImRpZUJheWVyaXNjaGVUb2tlblVzZXJUIiwiVXJpIjoic3RhZ2UtdC5hcGkubXVtc29sdXRpb24uZGUiLCJhdWQiOiJWb2xhdGl1bSIsImV4cCI6MTY1MzgxODMxMywiaXNzIjoiTU1Tb2x1dGlvbiJ9.4BWkATl8WdeLDPfaG27nXZislSB9JryDQvIQvtnFMfg
+------------- Ende LeseToken
+------------- Anfang:
+Input Vertrag MuM:
+{'nichtraucherstatus': 'Nichtraucher10Jahre', 'hoehstmoeglichebeitragsgarantie': False, 'beitragsgarantie': 0.0, 'todesfallleistungAufschubzeit': 'MaxBeitragsrueckgewaehrGuthaben', 'prozentBtgSumme': 0, 'fonds': 'DE0009848119', 'wertsicherungsfonds': '', 'tarifId': 41533, 'strategieId': 0, 'ueberschusssystem': 'Fondsueberschuesse', 'hoechstmoeglicheBeitragsgarantie': True, 'mindesttodesfallschutzWert': 0.0, 'rentengarantiezeit': 5, 'kapitalrueckgewaehr': False, 'rentenbezugsform': 'Dynamisch', 'mitAblaufleistung': True, 'beitragsdynamik': 0.0, 'bAVTarife': 'BZML', 'beitrag': 100, 'zahlweise': 'Monatlich', 'beitragszahlungsdauer': 37, 'aufschubzeit': 37, 'versicherungsbeginn': '2022-04-01', 'geburtsdatum': '1992-01-01T00:00:00'}
+	nichtraucherstatus: Nichtraucher10Jahre
+	hoehstmoeglichebeitragsgarantie: False
+	beitragsgarantie: 0.0
+	todesfallleistungAufschubzeit: MaxBeitragsrueckgewaehrGuthaben
+	prozentBtgSumme: 0
+	fonds: DE0009848119
+	wertsicherungsfonds: 
+	tarifId: 41533
+	strategieId: 0
+	ueberschusssystem: Fondsueberschuesse
+	hoechstmoeglicheBeitragsgarantie: True
+	mindesttodesfallschutzWert: 0.0
+	rentengarantiezeit: 5
+	kapitalrueckgewaehr: False
+	rentenbezugsform: Dynamisch
+	mitAblaufleistung: True
+	beitragsdynamik: 0.0
+	bAVTarife: BZML
+	beitrag: 100
+	zahlweise: Monatlich
+	beitragszahlungsdauer: 37
+	aufschubzeit: 37
+	versicherungsbeginn: 2022-04-01
+	geburtsdatum: 1992-01-01T00:00:00
+------------- Ende
