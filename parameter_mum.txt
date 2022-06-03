@@ -1,4 +1,0 @@
-username:dieBayerischeTokenUserT
-password:VS9^qmuV32C!6N$$Q7n$
-url_volatium:https://stage-t.api.mumsolution.de/volatium
-url_login:https://stage-t.api.mumsolution.de/login
