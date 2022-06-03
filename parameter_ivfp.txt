@@ -1,4 +1,0 @@
-username:bayerische
-password:aljvie
-url:https://planetbayerische.ivfp.eu/api/PriipCalculation
-
