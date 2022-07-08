@@ -1,0 +1,72 @@
+<ns0:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ns10="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:ns11="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:ns12="http://www.bipro.net/namespace/partner" xmlns:ns2="http://schemas.xmlsoap.org/ws/2005/02/sc" xmlns:ns3="http://docs.oasisopen.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ns4="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:ns6="http://www.bipro.net/namespace/nachrichten" xmlns:ns7="http://www.bipro.net/namespace/gevo" xmlns:ns8="http://www.bipro.net/namespace/allgemein" xmlns:ns9="http://www.bipro.net/namespace/produktmodell" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns0:Header>
+    <ns1:Security>
+      <ns2:SecurityContextToken ns3:Id="sct">
+        <ns2:Identifier />
+      </ns2:SecurityContextToken>
+    </ns1:Security>
+  </ns0:Header>
+  <ns0:Body>
+    <ns4:getOfferResponse xsi:schemaLocation="http://www.bipro.net/namespace/versicherung/tarifierung file:///E:/git/auroraTemplates/IVFP/Version-1.0/Norm-422/Schemas/Ivfp-Leben_2.7.0.1.1.xsd">
+      <ns4:Response>
+        <ns6:BiPROVersion>2.7.0.1.1</ns6:BiPROVersion>
+        <ns6:ConsumerID>ivfp</ns6:ConsumerID>
+        <ns6:Status>
+          <ns6:ProzessID>12345</ns6:ProzessID>
+          <ns6:Zeitstempel>2022-07-05T15:52:12</ns6:Zeitstempel>
+          <ns6:StatusID>NOK</ns6:StatusID>
+          <ns6:Schwebe>false</ns6:Schwebe>
+          <ns6:Meldung>
+            <ns6:ArtID>Hinweis</ns6:ArtID>
+            <ns6:MeldungID>01005</ns6:MeldungID>
+            <ns6:Text>soap:ServerValidierungsfehler200345Berechnungsfehler[[[Plausi=200345], [Objekt=Beginn], [Text=Bei Fondstarifen ist eine R&#252;ckdatierung nicht m&#246;glich],[ws_plausi=Vertrag.Beginn]]]</ns6:Text>
+          </ns6:Meldung>
+        </ns6:Status>
+        <ns4:Angebot>
+          <ns7:VorgangsnummerVM>Test</ns7:VorgangsnummerVM>
+          <ns7:Erstelldatum>2022-07-05T15:52:12</ns7:Erstelldatum>
+          <ns7:Dokumentanforderung>
+            <ns7:ArtID>Angebot</ns7:ArtID>
+          </ns7:Dokumentanforderung>
+          <ns7:Datei>
+            <ns8:Dateityp>Dokument</ns8:Dateityp>
+            <ns8:Komprimierungstyp>KEINE</ns8:Komprimierungstyp>
+            <ns8:DokumentartID>Angebot</ns8:DokumentartID>
+          </ns7:Datei>
+          <ns4:Verkaufsprodukt>
+            <ns9:Produkt xsi:type="pm-leben:CT_Produkt">
+              <ns9:Beitrag>
+                <ns9:Betrag />
+              </ns9:Beitrag>
+              <ns9:Elementarprodukt xsi:type="pm-leben:CT_Rente">
+                <ns10:VersicherungssummeOderLeistung>
+                  <ns10:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GesamteRente</ns10:ArtID>
+                </ns10:VersicherungssummeOderLeistung>
+                <ns10:VersicherungssummeOderLeistung>
+                  <ns10:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GesamteAblaufleistung</ns10:ArtID>
+                </ns10:VersicherungssummeOderLeistung>
+                <ns10:VersicherungssummeOderLeistung>
+                  <ns10:ArtID xsi:type="ivfpleben:STE_VersicherungssummeOderLeistungErweitert">GarantierterRentenfaktor</ns10:ArtID>
+                </ns10:VersicherungssummeOderLeistung>
+                <ns10:VersicherungssummeOderLeistung>
+                  <ns10:ArtID xsi:type="ivfpleben:STE_VersicherungssummeOderLeistungErweitert">AktuellerRentenfaktor</ns10:ArtID>
+                </ns10:VersicherungssummeOderLeistung>
+                <ns10:VersicherungssummeOderLeistung>
+                  <ns10:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GarantierteRente</ns10:ArtID>
+                </ns10:VersicherungssummeOderLeistung>
+                <ns11:IstHauptversicherung>true</ns11:IstHauptversicherung>
+                <ns11:VersichertePerson>
+                  <ns12:PartnerID>VN</ns12:PartnerID>
+                </ns11:VersichertePerson>
+              </ns9:Elementarprodukt>
+              <ns11:VorgabeBerechnung>
+                <ns11:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</ns11:ArtID>
+                <ns11:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Rente</ns11:Kontext>
+              </ns11:VorgabeBerechnung>
+            </ns9:Produkt>
+          </ns4:Verkaufsprodukt>
+        </ns4:Angebot>
+      </ns4:Response>
+    </ns4:getOfferResponse>
+  </ns0:Body>
+</ns0:Envelope>

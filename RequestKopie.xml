@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" xmlns:xsi="xsi">
+  <soapenv:Header>
+    <wsse:Security>
+      <wsc:SecurityContextToken xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc" xmlns:wsu="http://docs.oasisopen.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="sct">
+        <wsc:Identifier></wsc:Identifier>
+      </wsc:SecurityContextToken>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body>
+    <tarif:getOffer xmlns:daten="http://www.bipro.net/namespace/datentypen" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:ns12="http://www.bipro.net/namespace/sepa" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:ns15="http://www.bipro.net/namespace/foerderung" xmlns:ns16="http://www.bipro.net/namespace/vertrag" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:ns19="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:ivfpleben="http://ivfp.de/bipro/ivfp-leben" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:allgemein="http://www.bipro.net/namespace/allgemein" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
+      <tarif:Request>
+        <nachr:BiPROVersion>2.1.1.3.16</nachr:BiPROVersion>
+        <nachr:ConsumerID>Test</nachr:ConsumerID>
+        <tarif:Angebot>
+          <basis:Erweiterung xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ivfpleben:CT_TarifierungErweiterung">
+            <ivfpleben:Versicherername>die Bayerische</ivfpleben:Versicherername>
+            <!-- Alternativen: die Bayerische, Allianz Lebensversicherungs AG -->
+            <ivfpleben:Norm>BIPRO 422</ivfpleben:Norm>
+            <ivfpleben:Version>1.0</ivfpleben:Version>
+          </basis:Erweiterung>
+          <gevo:Vorgangsnummer>123</gevo:Vorgangsnummer>
+          <gevo:VorgangsnummerVM>1234</gevo:VorgangsnummerVM>
+          <gevo:Vermittler>
+            <allgemein:Vermittlernummer>72</allgemein:Vermittlernummer>
+            <allgemein:PartnerID>Vermittler</allgemein:PartnerID>
+            <allgemein:Art>04</allgemein:Art>
+          </gevo:Vermittler>
+          <gevo:Dokumentanforderung>
+            <gevo:ArtID>Angebot</gevo:ArtID>
+          </gevo:Dokumentanforderung>
+          <tarif:Partner xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="partner:CT_JuristischePerson">
+            <!-- Angabe der Vermittlerdaten -->
+            <partner:Anrede>0</partner:Anrede>
+            <partner:Name>Mustervermittler</partner:Name>
+            <partner:PartnerID>Vermittler</partner:PartnerID>
+            <partner:Anschrift>
+              <allgemein:Strasse>Musterstraße 10</allgemein:Strasse>
+              <allgemein:Postleitzahl>12345</allgemein:Postleitzahl>
+              <allgemein:Ort>Musterstadt</allgemein:Ort>
+              <allgemein:Land>D</allgemein:Land>
+              <partner:ArtID>1</partner:ArtID>
+            </partner:Anschrift>
+            <partner:Kommunikationsverbindung>
+              <partner:ArtID>20</partner:ArtID>
+              <partner:Kommunikationsadresse>0123-789 0</partner:Kommunikationsadresse>
+            </partner:Kommunikationsverbindung>
+            <partner:Rechtsform>99</partner:Rechtsform>
+          </tarif:Partner>
+          <tarif:Partner xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="partner:CT_Person">
+            <!-- Angabe der Kundendaten -->
+            <partner:Anrede>1</partner:Anrede>
+            <partner:Name>Kunde</partner:Name>
+            <partner:PartnerID>VN</partner:PartnerID>
+            <partner:Anschrift>
+              <allgemein:Strasse>Musterstraße 10</allgemein:Strasse>
+              <allgemein:Postleitzahl>12345</allgemein:Postleitzahl>
+              <allgemein:Ort>Musterstadt</allgemein:Ort>
+              <allgemein:Land>D</allgemein:Land>
+              <partner:ArtID>1</partner:ArtID>
+            </partner:Anschrift>
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risiko">
+              <pm-leben:Nichtraucher>true</pm-leben:Nichtraucher>
+            </partner:ZusaetzlichePartnerdaten>
+            <partner:Vorname>Muster</partner:Vorname>
+            <partner:Geburtsdatum>2002-06-27</partner:Geburtsdatum>
+            <!-- Eingabe des Geburtsdatum -->
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+            <partner:Familienstand>1</partner:Familienstand>
+            <!-- 1=ledig, 2=verheiratet, 3=geschieden, 4=verwitwet, 5=getrennt lebend, 6=eheähnliche Lebensgemeinschaft, 7=eingetragene Lebenspartnerschaft -->
+          </tarif:Partner>
+          <tarif:Versicherungsnehmer>
+            <partner:PartnerID>VN</partner:PartnerID>
+          </tarif:Versicherungsnehmer>
+          <tarif:Verkaufsprodukt>
+            <pm:Produkt xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="pm-leben:CT_Produkt">
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+              <!-- Angabe der Beitragszahlungsweise -->
+              <pm:Beitrag>
+                <pm:ArtID xmlns:daten="http://www.bipro.net/namespace/datentypen" xsi:type="daten:STE_BeitragBasis">01</pm:ArtID>
+                <pm:Betrag>
+                  <allgemein:Betrag>100.00</allgemein:Betrag>
+                  <!-- Höhe des Beitrags -->
+                  <allgemein:Waehrung>EUR</allgemein:Waehrung>
+                </pm:Betrag>
+              </pm:Beitrag>
+              <pm:Sparte>010</pm:Sparte>
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_Rente">
+                <pm:Bezeichnung>FRVB</pm:Bezeichnung>
+                <!-- Bayerische FRVB = Bayerische Fondsrente, FRVN = Pangaea Life Invest -->
+				<!-- Allianz Privatrente: RSKU1 = Perspektive, RIIU1 =IndexSelect, RF1GD = InvestFlex, RFKU1 = KomfortDynamik -->
+				<!-- Allianz Basisrente: BVRSKU1 = Perspektive,  BVRIIU1  = IndexSelect, BVRIITU1 = IndexSelect Plus, BVRF1/BVRF1GD = InvestFlex, BVRFKU1 = KomfortDynamik -->	
+                <pm:Versicherungsdauer>
+                  <allgemein:Beginn>2022-08-01T00:00</allgemein:Beginn>
+                  <!-- Versicherungsbeginn -->
+                </pm:Versicherungsdauer>
+                <vs-pm:VersicherungssummeOderLeistung>
+                  <vs-pm:ArtID xsi:type="daten:STE_VersicherungssummeOderLeistungBasis">GesamteRente</vs-pm:ArtID>
+                  <vs-pm:Wert>40</vs-pm:Wert>
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                </vs-pm:VersicherungssummeOderLeistung>
+                <vs-pm:FondsPortfolio>
+                  <basis:Erweiterung xsi:type="ivfpleben:CT_FondsPortfolioErweiterung">
+                    <ivfpleben:WertentwicklungNachFondskosten>true</ivfpleben:WertentwicklungNachFondskosten>
+                    <!-- WICHTIG: Für Bruttoberechnung auf True setzen -->
+                  </basis:Erweiterung>
+                  <vs-pm:FondsAnteil>
+                    <kapanl-basis:ISIN>AT0000A23YF6</kapanl-basis:ISIN>
+                    <!-- Angabe des Fonds, Bspw. 3 Banken Mensch & Umwelt Aktienfonds I = AT0000A23YF6 bei FRVB;  bei Pangaea wird automatisch der InterneFonds PangaeaLife_BlueEnergy gewählt; bei Allianz bspw. LU0048578792 = Fidelity Funds - European Growth Fund A Fonds   -->
+                    <vs-pm:Prozentsatz>100.0</vs-pm:Prozentsatz>
+                  </vs-pm:FondsAnteil>
+                </vs-pm:FondsPortfolio>
+                <pm-leben:Hochrechnungszins>6</pm-leben:Hochrechnungszins>
+                <!-- Angabe der Wertentwicklung -->
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                <pm-leben:UeberschussverwendungNachLeistung xmlns:daten="http://www.bipro.net/namespace/datentypen" xsi:type="daten:STE_UeberschussverwendungBasis">14</pm-leben:UeberschussverwendungNachLeistung>
+                <!-- 14 = Dynamische Rentenerhöhung , 15 = Gewinnrente mit Dynamik, 16 = fallende Gewinnrente -->
+                <pm-leben:Endalter>67</pm-leben:Endalter>
+                <pm-leben:VersichertePerson>
+                  <partner:PartnerID>VN</partner:PartnerID>
+                </pm-leben:VersichertePerson>
+                <pm-leben:Garantiezeit>
+                  <allgemein:AnzahlJahre>0</allgemein:AnzahlJahre>
+                  <!-- Angabe der Rentengarantiezeit -->
+                </pm-leben:Garantiezeit>
+              </pm:Elementarprodukt>
+              <pm-leben:VorgabeBerechnung>
+                <pm-leben:ArtID xmlns:daten="http://www.bipro.net/namespace/datentypen" xsi:type="daten:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+                <pm-leben:Kontext xmlns:daten="http://www.bipro.net/namespace/datentypen" xsi:type="daten:STE_VorgabeBerechnungKontextBasis">Rente</pm-leben:Kontext>
+              </pm-leben:VorgabeBerechnung>
+            </pm:Produkt>
+          </tarif:Verkaufsprodukt>
+        </tarif:Angebot>
+      </tarif:Request>
+    </tarif:getOffer>
+  </soapenv:Body>
+</soapenv:Envelope>
